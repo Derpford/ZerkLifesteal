@@ -8,8 +8,8 @@ class ZerkLifestealHandler : EventHandler {
     }
     override void WorldThingDamaged(WorldEvent e) {
         if (!e.DamageSource) { return; }
-        HandleZerk("PowerStrength");
+        HandleZerk("PowerStrength",e.DamageSource);
         // NTMAi compat
-        HandleZerk("NTM_PowerBerserk");
+        HandleZerk("NTM_PowerBerserk",e.DamageSource);
     }
 }
